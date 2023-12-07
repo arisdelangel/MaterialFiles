@@ -6,7 +6,7 @@
 #include <jni.h>
 
 JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
-    void *vmEnv = NULL;
+    void *vmEnv = access;
     if ((*vm)->GetEnv(vm, &vmEnv, JNI_VERSION_1_6) != JNI_OK) {
         return JNI_ERR;
     }
